@@ -6,6 +6,8 @@ Global
 $text-color: #4d5156;
 $light-blue: #00c6ff;
 $dark-blue: #0072ff;
+$green-color: #198754;
+$red-color: #dc3545;
 $linear-gradient: linear-gradient($light-blue, $dark-blue);
 
 @mixin fonts($size, $weight, $color) {
@@ -14,10 +16,10 @@ $linear-gradient: linear-gradient($light-blue, $dark-blue);
     color: $color;
 }
 
-@mixin bg-img {
+@mixin bg-img($position, $size) {
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: $position;
+    background-size: $size;
 }
 
 @mixin transition {
@@ -361,13 +363,18 @@ header {
     }
 
     .form-control {
-        border-radius: 20px;
+        border-radius: 0 20px 20px 0 !important;
         background: transparent;
     }
 
     .form-control::placeholder {
         @include fonts(14px, 400, $text-color);
         text-transform: capitalize;
+    }
+
+    .invalid-feedback {
+        margin-top: 8px;
+        margin-left: 40px;
     }
 
     .btn {
@@ -401,5 +408,29 @@ header {
 @media (max-width: 767.98px) {
     header {
         padding: 50px 0;
+    }
+}
+
+.form-error {
+    .input-group-text {
+        border-color: $red-color;
+    }
+
+    .form-control {
+        border-color: $red-color;
+        background-image: url(./warning.svg);
+        @include bg-img(right calc(0.375em + 0.1875rem) center, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem));
+    }
+}
+
+.form-success {
+    .input-group-text {
+        border-color: $green-color;
+    }
+
+    .form-control {
+        border-color: $green-color;
+        background-image: url(./check.svg);
+        @include bg-img(right calc(0.375em + 0.1875rem) center, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem));
     }
 }

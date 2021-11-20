@@ -42,24 +42,30 @@
                 <div class="col-xl-4 col-lg-5 col-md-6">
                     <div class="form-wrapper">
                         <h3 class="title">Register Here!</h3>
-                        <form class="main-form">
+                        <form class="main-form" id="reg-form" autocomplete="off">
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <input class="form-control" type="email" placeholder="User Name">
+                                <input class="form-control" type="text" placeholder="User Name" id="username">
+                                <div class="invalid-feedback"></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input class="form-control" type="email" placeholder="Email Address">
+                                <input class="form-control" type="text" placeholder="Email Address" id="emailId">
+                                <div class="invalid-feedback"></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                <input class="form-control" type="password" placeholder="Password">
+                                <input class="form-control" type="password" placeholder="Password" id="pw"
+                                    title="Password must be at least 8 characters long & contain an uppercase, a digit & one special character">
+                                <div class="invalid-feedback"></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                <input class="form-control" type="password" placeholder="Confirm Password">
+                                <input class="form-control" type="password" placeholder="Confirm Password"
+                                    id="confirmPw">
+                                <div class="invalid-feedback"></div>
                             </div>
-                            <button class="btn rounded-pill" type="submit">Submit</button>
+                            <button class="btn rounded-pill" type="submit" id="submit-btn">Submit</button>
                         </form>
                         <div class="user-signup">
                             <span>Already have an account?</span>
@@ -81,6 +87,8 @@
     <script src="assets/vendor/scroll-up.min.js"></script>
     <!-- Custom Js -->
     <script src="assets/js/custom.js"></script>
+    <!-- Form Validation Js -->
+    <script src="assets/js/form-validation.js"></script>
 </body>
 
 </html>
