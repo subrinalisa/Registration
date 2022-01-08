@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Title -->
-    <title>Form</title>
+    <title>Registration Form</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
     <!-- Bootstrap Stylesheet -->
@@ -45,24 +45,27 @@
                         <form class="main-form" id="reg-form" autocomplete="off">
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                <input class="form-control" type="text" placeholder="User Name" id="username">
+                                <input class="form-control" type="text" placeholder="User Name" name="username"
+                                    id="username">
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input class="form-control" type="text" placeholder="Email Address" id="emailId">
+                                <input class="form-control" type="text" placeholder="Email Address" name="email"
+                                    id="emailId">
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                <input class="form-control" type="password" placeholder="Password" id="pw"
+                                <input class="form-control" type="password" placeholder="Password" name="password"
+                                    id="pw"
                                     title="Password must be at least 8 characters long & contain an uppercase, a digit & one special character">
                                 <div class="invalid-feedback"></div>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 <input class="form-control" type="password" placeholder="Confirm Password"
-                                    id="confirmPw">
+                                    name="password" id="confirmPw">
                                 <div class="invalid-feedback"></div>
                             </div>
                             <button class="btn rounded-pill" type="submit" id="submit-btn">Submit</button>
@@ -76,7 +79,17 @@
             </div>
         </div>
     </header>
-    <!-- ========= Js Files ========= -->
+    <!-- ========= Modal ========= -->
+    <div class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <img src="./assets/images/success.png" class="img-fluid" alt="message">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Jquery Js -->
     <script src="assets/js/jquery-1.12.4.js"></script>
     <!-- Popper Js -->

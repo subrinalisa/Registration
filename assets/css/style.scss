@@ -434,3 +434,22 @@ header {
         @include bg-img(right calc(0.375em + 0.1875rem) center, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem));
     }
 }
+
+.modal {
+    @include transition();
+
+    .modal-content {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .modal-body {
+        padding: 8px;
+        position: relative;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
