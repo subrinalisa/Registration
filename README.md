@@ -8,7 +8,7 @@
     <li>Open the index.html file into the vs code</li>
     <li>Open the file into your live server & use the app</li>
 </ul>
-<h2>Live Link: <a href="https://subrinalisa.github.io/registerForm/" style="font-size: 18px;">Demo</a></h2>
+<h2>Live Link: <a href="https://subrinalisa.github.io/register-form/" style="font-size: 18px;">Demo</a></h2>
 <h2>How to use the app</h2>
 <ul>
     <li>Enter your user name, email, password & confirm password into the following fields</li>
